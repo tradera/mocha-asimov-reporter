@@ -1,0 +1,22 @@
+{
+  "name": "mocha-asimov-reporter",
+  "version": "1.0.0",
+  "description": "Asimov reporter for mocha",
+  "main": "./src/asimov-reporter.js",
+  "repository": {
+    "type": "git",
+    "url": "http://se0-gitlab-01.intranet.tradera.com/tradera/mocha-karma-reporter.git"
+  },
+  "keywords": [
+    "asimov",
+    "deploy",
+    "mocha",
+    "reporter",
+    "tradera"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  }
+}
