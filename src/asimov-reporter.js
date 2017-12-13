@@ -19,7 +19,7 @@ function AsimovReporter(runner) {
 
     runner.on('fail', function (test, err) {
         failures++;
-        writeResult(test.fullTitle(), 'false');
+        writeResult('fail: ' + test.fullTitle() + ' -- error: ' + err.message, 'false');
     });
 
     runner.on('end', function () {
