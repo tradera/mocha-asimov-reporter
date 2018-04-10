@@ -21,6 +21,6 @@
     "prettier": "^1.11.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter=../../../slsrc/asimov-reporter.js  ./test/mocha-asimov-reporter.test.js"
+    "test": "node_modules/.bin/mocha --reporter=../../../src/asimov-reporter.js  ./test/mocha-asimov-reporter.test.js"
   }
 }
