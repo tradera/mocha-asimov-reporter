@@ -1,6 +1,6 @@
 {
   "name": "@tradera/mocha-asimov-reporter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom mocha reporter for the Asimov Deploy Format",
   "main": "./src/asimov-reporter.js",
   "repository": {
