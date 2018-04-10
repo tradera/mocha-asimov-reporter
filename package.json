@@ -1,13 +1,19 @@
 {
   "name": "@tradera/mocha-asimov-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom mocha reporter for the Asimov Deploy Format",
   "main": "./src/asimov-reporter.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/asimov-deploy/asimov-deploy"
   },
-  "keywords": ["asimov", "deploy", "mocha", "reporter", "tradera"],
+  "keywords": [
+    "asimov",
+    "deploy",
+    "mocha",
+    "reporter",
+    "tradera"
+  ],
   "author": "Djenkins",
   "license": "ISC",
   "dependencies": {
@@ -15,7 +21,6 @@
     "prettier": "^1.11.1"
   },
   "scripts": {
-    "test":
-      "node_modules/.bin/mocha --reporter=../../../src/asimov-reporter.js  ./test/mocha-asimov-reporter.test.js"
+    "test": "node_modules/.bin/mocha --reporter=../../../src/asimov-reporter.js  ./test/mocha-asimov-reporter.test.js"
   }
 }
