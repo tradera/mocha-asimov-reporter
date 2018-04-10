@@ -18,7 +18,7 @@ The Mocha-Asimov-reporter allows you to write mocha tests and generate report ou
 ## 1.1. Setup
 
 1.  `npm install @tradera/mocha-asimov-reporter`
-2.  Add to mocha via the command line `--reporter mocha-asimov-reporter`
+2.  Add to mocha via the command line `--reporter @tradera/mocha-asimov-reporter`
 
 ## 1.2. Output
 
