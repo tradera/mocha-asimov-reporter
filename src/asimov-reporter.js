@@ -4,23 +4,40 @@
 var mocha = require("mocha");
 
 function writeResult(message, status) {
-  console.log(`##asimov-deploy[test='${message}' pass='${status}']\n\n`);
+  let m = encodeForAsimov(message);
+  console.log(`##asimov-deploy[test='${m}' pass='${status}']\n\n`);
 }
+
+const encodeForAsimov = function(string2replace) {
+  const search = "'";
+  const replacement = '"';
+
+  if (string2replace.length < 1) {
+    return string2replace;
+  }
+
+  // remove invalid chars or encode them and finally strip unnecessary whitespace
+  return string2replace.replace(new RegExp(search, "g"), replacement).replace(/\s\s+/g," ");
+};
 
 function AsimovReporter(runner) {
   mocha.reporters.Base.call(this, runner);
-  var passes = 0;
-  var failures = 0;
+  let passes = 0;
+  let failures = 0;  
+
+  const customFullTitle = test => {
+    return test.titlePath().join(" => ");
+  };
 
   runner.on("pass", function(test) {
     passes++;
-    writeResult(test.fullTitle(), "true");
+    writeResult(customFullTitle(test), "true");
   });
 
   runner.on("fail", function(test, err) {
     failures++;
     writeResult(
-      "fail: " + test.fullTitle() + " -- error: " + err.message,
+      `fail: ${customFullTitle(test)} -- ERROR: "${err.message}" -- STACKTRACE: "${err.stack}" -- TESTBODY "${test.body}"`,
       "false"
     );
   });
