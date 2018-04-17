@@ -4,4 +4,8 @@ describe("test mocha-asimov-reporter output", function() {
   it("should pass", function() {
     assert.ok(true);
   });
+
+  it("should fail", function() {
+    assert.ok(false);
+  });
 });
