@@ -1,3 +1,7 @@
+[![npm](https://img.shields.io/npm/dm/mocha-asimov-reporter.svg)]()
+[![npm](https://img.shields.io/npm/dt/mocha-asimov-reporter.svg)]()
+[![npm](https://img.shields.io/npm/v/mocha-asimov-reporter.svg)]()
+
 # 1. Mocha-asimov-reporter
 
 <!-- TOC -->
@@ -6,6 +10,7 @@
     - [1.1. Setup](#11-setup)
     - [1.2. Output](#12-output)
     - [1.3. Examples](#13-examples)
+        - [Testing](#testing)
 
 <!-- /TOC -->
 
@@ -44,3 +49,8 @@ Expected output:
 ```
 ##asimov-deploy[test='test mocha-asimov-reporter output should pass' pass='true']
 ```
+
+
+### Testing
+
+`yarn test`
